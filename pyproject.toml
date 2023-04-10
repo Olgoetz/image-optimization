@@ -1,0 +1,29 @@
+# pyproject.toml
+
+[build-system]
+requires = ["setuptools>=64.0.0"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "image-optimizer"
+version = "1.0.0"
+description = "Optimize images for web"
+readme = "README.md"
+authors = [{ name = "Oliver Götz", email = "goetzoliver89@gmail.com" }]
+dependencies = ["Pillow>=9.5.0"]
+requires-python = ">=3.9"
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[project.urls]
+Homepage = "https://github.com/realpython/reader"
+
+[project.scripts]
+image-optimizer = "image_optimizer_cli.__main__:main"
