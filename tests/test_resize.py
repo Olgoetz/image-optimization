@@ -3,7 +3,7 @@ import pathlib
 import os
 from PIL import Image
 from app.model import resize
-
+import shutil
 # Current directory
 HERE = pathlib.Path(__file__).resolve().parent
 
@@ -12,6 +12,8 @@ class ApplicationTests(unittest.TestCase):
     def test_resize(self):
         input_path = os.path.join(f"{HERE}/pics_src", "")
         output_path = os.path.join(f"{HERE}/pics_out", "")
+
+        os.mkdir(output_path)
 
         # Test fixed height
         resize(input_path, output_path, fixed_height=500,
@@ -38,3 +40,5 @@ class ApplicationTests(unittest.TestCase):
             height = Image.open(output_path+img).size[1]
             self.assertEqual(height, 400)
             self.assertEqual(width, 300)
+
+        shutil.rmtree(output_path)
