@@ -3,7 +3,6 @@ import pathlib
 import os
 from PIL import Image
 from src.model import resize
-
 # Current directory
 HERE = pathlib.Path(__file__).resolve().parent
 

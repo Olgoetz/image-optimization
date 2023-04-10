@@ -26,4 +26,4 @@ dev = ["pytest"]
 Homepage = "https://github.com/realpython/reader"
 
 [project.scripts]
-image-optimizer = "src.__main__:main"
+image-optimizer = "app.__main__:main"
