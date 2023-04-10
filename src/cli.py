@@ -5,7 +5,8 @@ import os
 
 def main():
     global_parser = argparse.ArgumentParser(
-        prog="image-optimizer", description="Tool to optimize for web application and saves them as .webp file.")
+        prog="image-optimizer",
+        description="Tool to optimize for web application & saves them as .webp file.")
 
     # Some arguments
     global_parser.add_argument(
@@ -15,11 +16,19 @@ def main():
 
     # Some options
     global_parser.add_argument(
-        "-fh", "--fixed-height", type=int, help="Set a fixed height of the resized image, but keep the aspect ratio (default: 1000)")
+        "-fh", "--fixed-height",
+        type=int,
+        help="Set a fixed height of the resized image, but keep the aspect ratio + "
+        "(default: 1000)")
     global_parser.add_argument(
-        "-fw", "--fixed-width", type=int, help="Set a fixed width of the resized image, but keep the aspect ratio")
-    global_parser.add_argument("-q", "--quality", type=int, default=90,
-                               help="Set the quality of the image reduction (default: 90)")
+        "-fw", "--fixed-width",
+        type=int,
+        help="Set a fixed width of the resized image, but keep the aspect ratio")
+    global_parser.add_argument("-q", "--quality",
+                               type=int,
+                               default=90,
+                               help="Set the quality of the image reduction + "
+                               "(default: 90)")
 
     args = global_parser.parse_args()
 
