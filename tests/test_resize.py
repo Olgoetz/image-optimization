@@ -2,7 +2,7 @@ import unittest
 import pathlib
 import os
 from PIL import Image
-from image_optimizer_cli.model import resize
+from src.model import resize
 
 # Current directory
 HERE = pathlib.Path(__file__).resolve().parent
